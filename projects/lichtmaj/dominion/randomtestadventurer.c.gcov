@@ -1,0 +1,99 @@
+        -:    0:Source:randomtestadventurer.c
+        -:    0:Graph:randomtestadventurer.gcno
+        -:    0:Data:randomtestadventurer.gcda
+        -:    0:Runs:8
+        -:    0:Programs:1
+        -:    1:/*
+        -:    2: * randomtestadventurer.c
+        -:    3: */
+        -:    4:
+        -:    5:#include "dominion.h"
+        -:    6:#include "dominion_helpers.h"
+        -:    7:#include <string.h>
+        -:    8:#include <stdio.h>
+        -:    9:#include <assert.h> 
+        -:   10:#include "rngs.h"
+        -:   11:#include <stdlib.h>
+        -:   12:
+        -:   13:#define TESTCARD "adventurer"
+        -:   14:
+        -:   15:
+        -:   16:int testsPassed = 0;
+        -:   17:int testsFailed = 0;
+        -:   18:
+        -:   19:void myAssert(int passOrFail, char *nameOfTest){
+    20000:   20:	if (passOrFail > 0){
+     8012:   21:	  	printf("TEST: %s PASSED\n", nameOfTest);
+     8012:   22:	    testsPassed++;
+     8012:   23:  	}
+        -:   24:    else{
+    11988:   25:	    printf("TEST: %s FAILED\n", nameOfTest);
+    11988:   26:	    testsFailed++;
+        -:   27:  	}
+    20000:   28:}
+        -:   29:
+        -:   30:
+        -:   31:int main() {
+        -:   32:	int i, j, m;
+        8:   33:	int handpos = 0, choice1 = 0, choice2 = 0, choice3 = 0, bonus = 0;
+        8:   34:	int seed = 1000;
+        8:   35:	int numPlayers = 2; 
+        8:   36:	int thisPlayer = 0;
+        8:   37:	int beforeTreasure = 0;
+        8:   38:	int afterTreasure = 0;
+        -:   39:	struct gameState G, testG;
+        8:   40:	int k[10] = {adventurer, embargo, village, minion, mine, cutpurse,
+        -:   41:	  sea_hag, tribute, smithy, council_room};
+        8:   42:	srand(time(NULL));
+        8:   43:	int newActions = 1;
+        -:   44:
+        8:   45:	printf("----------------- Testing Card: %s ----------------\n", TESTCARD);
+        8:   46:	printf("Adventurer: Reveal cards in deck until 2 treasure cards are revealed and discard the rest\n");
+        -:   47:
+     8016:   48:	for (i = 0; i < 500; i++){
+        -:   49:		//reset counters
+     4000:   50:	    beforeTreasure = 0; 
+     4000:   51:	    afterTreasure = 0; 
+        -:   52:	    //randomize number of players and starting player
+     4000:   53:	    numPlayers = rand() % 2 + 2; 
+     4000:   54:	    thisPlayer = rand() % numPlayers;
+     4000:   55:	    seed = rand();
+        -:   56:	    //initialize game
+     4000:   57:	    initializeGame(numPlayers, k, seed, &G); 
+     4000:   58:	    memcpy(&testG, &G, sizeof(struct gameState)); 
+        -:   59:	    //randomize deck count, discard count, handcount, hand position
+     4000:   60:	    G.deckCount[thisPlayer] = rand() % MAX_DECK;
+     4000:   61:	    G.discardCount[thisPlayer] = rand() % MAX_DECK;
+     4000:   62:	    G.handCount[thisPlayer] = rand() % MAX_HAND;
+     4000:   63:	    handpos = rand() % G.handCount[thisPlayer]; 
+     4000:   64:	    G.hand[thisPlayer][handpos] = adventurer;
+     4000:   65:	    printf("NumPlayers: %d This Player: %d Deckcount: %d Discardcound: %d Handcount %d Handpos %d\n", numPlayers, thisPlayer, G.deckCount[thisPlayer], G.discardCount[thisPlayer], G.handCount[thisPlayer], handpos);
+        -:   66:	    //play card
+     4000:   67:	    cardEffect(adventurer, choice1, choice2, choice3, &testG, handpos, &bonus);
+        -:   68:
+  2016200:   69:	    for(j = 0; j < G.handCount[thisPlayer]; j++){
+  3000788:   70:		    if (G.hand[thisPlayer][j] == copper || G.hand[thisPlayer][j] == silver || G.hand[thisPlayer][j] == gold){
+     5756:   71:		      beforeTreasure++;
+     5756:   72:		    }
+  1004100:   73:	    }
+    24800:   74:	    for(j = 0; j < testG.handCount[thisPlayer]; j++){
+    13504:   75:		    if (testG.hand[thisPlayer][j] == copper || testG.hand[thisPlayer][j] == silver || testG.hand[thisPlayer][j] == gold){
+     5848:   76:		      afterTreasure++;
+     5848:   77:		    }
+     8400:   78:	  	}
+        -:   79:
+     4000:   80:	    printf("Test 1 Correct number of cards in deck: deck count = %d, expected = %d\n", testG.deckCount[thisPlayer], G.deckCount[thisPlayer] - 1);
+     4000:   81:	    printf("Test 2 New hand count = %d, expected = %d\n", testG.handCount[thisPlayer], G.handCount[thisPlayer] + 1);
+     4000:   82:	    printf("Test 3 The turn has not changed: whose turn = %d, expected = %d\n", testG.whoseTurn, G.whoseTurn);
+     4000:   83:	    printf("Test 4 Actions are one fewer: num actions = %d, expected = %d\n", testG.numActions, G.numActions + newActions - 1);
+     4000:   84:	    printf("Test 5 Treasure in hand has increased by 2: after treasure = %d, expected = %d\n", afterTreasure, beforeTreasure + 2);
+        -:   85:	    
+     4000:   86:	    myAssert(testG.deckCount[thisPlayer] == G.deckCount[thisPlayer] - 1, "-1 Cards in Deck");
+     4000:   87:	    myAssert(testG.handCount[thisPlayer] == G.handCount[thisPlayer] + 1, "+1 Cards in Hand");
+     4000:   88:	    myAssert(testG.whoseTurn == G.whoseTurn, "Turn hasn't changed");
+     4000:   89:	    myAssert(testG.numActions == G.numActions + newActions - 1, "No actions left after playing card");
+     4000:   90:	    myAssert(beforeTreasure == afterTreasure + 2, "+2 more treasure cards in hand");
+        -:   91:	    
+     4000:   92:    }
+        8:   93:  return 0;
+        -:   94:}
