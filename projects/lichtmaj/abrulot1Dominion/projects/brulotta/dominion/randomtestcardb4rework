@@ -1,0 +1,145 @@
+/************************************************************************
+ * Author: Adam Brulotte
+ * Class: CS362 W2018
+ * Assignment: 4
+ * Name: randomtestcard1.c
+ * Description: Random tester for the dominion card Council Room.  
+ * **********************************************************************/
+
+#include "dominion.h"
+#include <string.h>
+#include <assert.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include "rngs.h"
+#include "dominion_helpers.h"
+#include <math.h>
+#include <time.h>
+
+
+
+//define variable to hold the card under test
+#define TESTCARD "council_room"
+
+
+int testCard(struct gameState *test)
+{
+printf("\nin testCard\n");
+	//variables
+	int cardEff, p, i;	
+	int choice1 = 0, choice2 = 0, choice3 = 0, handPos = 0, bonus = 0;
+	int discardErr = 0, handErr = 0, otherHandErr = 0, buyErr = 0;
+	int deckErr = 0;
+
+	//create instance of the game state to test
+	struct gameState control;
+
+	//copy parameter gamestate to test gamestate
+	memcpy(&control, test, sizeof(struct gameState));
+
+	p = test->whoseTurn;	//get current player	
+printf("\n%d\n", p);
+printf("\nb4 cardEffect\n");
+	//call cardEffect with the chosen card
+	//cardEff = cardEffect(council_room, choice1, choice2, choice3, test, handPos, &bonus);	
+	cardEffect(council_room, choice1, choice2, choice3, test, handPos, &bonus);	
+printf("\nafter cardEffect\n");
+	
+	//-------------Player's hand is 3 cards larger-----------------------
+	if(control.handCount[p] + 3 != test->handCount[p])
+	{
+		printf("\t---FAILED---\n");
+		handErr++;		//increment hand failure counter
+	}
+
+	//-------------Player has an additional buy--------------------------
+	if(control.numBuys + 1 != test->numBuys)
+	{
+		printf("\t---FAILED---\n");
+		buyErr++;		//increment buy failure counter
+	}
+	
+	//-------------Player's deck is 4 cards smaller----------------------
+	if(control.deckCount[p] - 4 != test->deckCount[p])
+	{
+		printf("\t---FAILED---\n");
+		deckErr++;		//increment deck failure counter
+	}
+
+	//-------------Player's discard pile is 1 card larger----------------
+	if(control.discardCount[p] + 1 != test->discardCount[p])
+	{
+		printf("\t---FAILED---\n");
+		discardErr++;		//increment discard failure counter
+	}
+
+	//-------------All other players have an additional card in hand-----
+	int failCondition = 0;	//set to indicate test failure
+
+	for(i = 0; i < test->numPlayers; i++)
+	{
+		if(i != p)
+		{
+			if(control.handCount[i] + 1 != test->handCount[i])
+			{
+				printf("\tPlayer %d failed\n", i);
+				failCondition = 1;	
+			}
+		}
+	}
+	if(failCondition)
+	{
+		printf("\t---TEST FAILED---\n\n");
+		otherHandErr++;	
+	}
+	
+	return 0;	
+}
+
+
+int main()
+{
+	//seed the random test generator
+	SelectStream(3);
+	PutSeed(4);
+	srand(time(0)); //using rand for #players, not sure how to limit Random()
+	//variables
+	int i, j, k, player, participants;
+	int numTests = 100;
+	int lo = 2;
+	
+	//make instances of the game
+	struct gameState Game;
+	
+	//loop to run interations of the tests
+	for(i = 0; i < numTests; i++)
+	{
+		//fill the game state with random bytes
+		for(j = 0; j < sizeof(struct gameState); j++)
+		{
+			((char*)&Game)[j] = floor(Random() * 256);
+		}
+printf("\ngamestate filled\n");
+				
+		//set "good" values for important variables
+		player = floor(Random() * MAX_PLAYERS);	//choose a random player
+		Game.deckCount[player] = floor(Random() * MAX_DECK);
+		Game.discardCount[player] = floor(Random() * MAX_DECK);
+		Game.handCount[player] = floor(Random() * MAX_HAND);
+		
+/*		//loop to choose random number of players
+		do
+		{
+			participants = rand();
+		}while(participants < lo || participants >= MAX_PLAYERS);
+*/
+		participants = 2;		
+		Game.numPlayers = participants;
+		Game.whoseTurn = player;	//pass the set player to the test
+printf("\nb4 func call\n");
+		//call the cardTest function
+		testCard(&Game);
+	}	
+
+	return 0;
+}

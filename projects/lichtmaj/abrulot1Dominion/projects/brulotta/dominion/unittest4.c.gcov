@@ -1,0 +1,99 @@
+        -:    0:Source:unittest4.c
+        -:    0:Graph:unittest4.gcno
+        -:    0:Data:unittest4.gcda
+        -:    0:Runs:4
+        -:    0:Programs:1
+        -:    1:/* -----------------------------------------------------------------------
+        -:    2: * IS GAME OVER
+        -:    3: * -----------------------------------------------------------------------
+        -:    4: */
+        -:    5:
+        -:    6:#include "dominion.h"
+        -:    7:#include "dominion_helpers.h"
+        -:    8:#include <string.h>
+        -:    9:#include <stdio.h>
+        -:   10:#include <assert.h>
+        -:   11:#include "rngs.h"
+        -:   12:
+        -:   13:// set NOISY_TEST to 0 to remove printfs from output
+        -:   14:#define NOISY_TEST 1
+        -:   15:
+        -:   16:int main() {
+        4:   17:    int testsPassed = 0;
+        4:   18:    int testsFailed = 0;
+        -:   19:    int i;
+        4:   20:    int seed = 1000;
+        4:   21:    int numPlayer = 3;
+        4:   22:    int maxBonus = 10;
+        -:   23:    int p, r, handCount, toState;
+        -:   24:    int bonus;
+        4:   25:    int k[10] = {adventurer, council_room, feast, gardens, mine
+        -:   26:               , remodel, smithy, village, baron, great_hall};
+        -:   27:    struct gameState G;
+        4:   28:    int maxHandCount = 5;
+        -:   29:    // arrays of all coppers, silvers, and golds
+        -:   30:    int coppers[MAX_HAND];
+        -:   31:    int silvers[MAX_HAND];
+        -:   32:    int golds[MAX_HAND];
+     4008:   33:    for (i = 0; i < MAX_HAND; i++)
+        -:   34:    {
+     2000:   35:        coppers[i] = copper;
+     2000:   36:        silvers[i] = silver;
+     2000:   37:        golds[i] = gold;
+     2000:   38:    }
+        -:   39:
+        4:   40:    printf ("TESTING isGameOver():\n");
+        -:   41:#if (NOISY_TEST == 1)
+        4:   42:                printf("Testing with new game.\n", p);
+        -:   43:#endif
+        4:   44:                memset(&G, 23, sizeof(struct gameState));   // clear the game state
+        4:   45:                r = initializeGame(numPlayer, k, seed, &G); // initialize a new game
+        4:   46:                int rValue = isGameOver(&G);
+        -:   47:#if (NOISY_TEST == 1)
+        4:   48:                printf("New game is not over and return value is %d, expected %d\n",rValue, 0);
+        -:   49:
+        -:   50:#endif
+        4:   51:                if(rValue == 0){
+        4:   52:                    testsPassed++;
+        4:   53:                } else {
+    #####:   54:                    testsFailed++;
+        -:   55:                }
+        -:   56:
+        -:   57:#if (NOISY_TEST == 1)
+        4:   58:                printf("Testing with empty province .\n", p);
+        -:   59:#endif
+        4:   60:                memset(&G, 23, sizeof(struct gameState));   // clear the game state
+        4:   61:                r = initializeGame(numPlayer, k, seed, &G); // initialize a new game
+        4:   62:                G.supplyCount[province] = 0;
+        4:   63:                rValue = isGameOver(&G);
+        -:   64:#if (NOISY_TEST == 1)
+        4:   65:                printf("Game is over and return value is %d, expected %d\n",rValue, 1);
+        -:   66:
+        -:   67:#endif
+        4:   68:                if(rValue == 1){
+        4:   69:                    testsPassed++;
+        4:   70:                } else {
+    #####:   71:                    testsFailed++;
+        -:   72:                }
+        -:   73:#if (NOISY_TEST == 1)
+        4:   74:                printf("Testing 3 empty supply piles .\n", p);
+        -:   75:#endif
+        4:   76:                memset(&G, 23, sizeof(struct gameState));   // clear the game state
+        4:   77:                r = initializeGame(numPlayer, k, seed, &G); // initialize a new game
+        4:   78:                G.supplyCount[copper] = 0;
+        4:   79:                G.supplyCount[estate] = 0;
+        4:   80:                G.supplyCount[adventurer] = 0;
+        4:   81:                rValue = isGameOver(&G);
+        -:   82:#if (NOISY_TEST == 1)
+        4:   83:                printf("Game is over and return value is %d, expected %d\n",rValue, 1);
+        -:   84:
+        -:   85:#endif
+        4:   86:                if(rValue == 1){
+        4:   87:                    testsPassed++;
+        4:   88:                } else {
+    #####:   89:                    testsFailed++;
+        -:   90:                }
+        4:   91:    printf("Tests passed: %d\n",testsPassed);
+        4:   92:    printf("Tests failed: %d\n",testsFailed);
+        4:   93:    return 0;
+        -:   94:}

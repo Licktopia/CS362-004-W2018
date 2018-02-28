@@ -1,0 +1,49 @@
+int adventurerAction(int handPos, int currentPlayer, int drawntreasure, struct gameState *state)
+{  
+	int z = 0, temphand[MAX_HAND];
+	int totalDrawn = 0;
+
+
+	while(drawntreasure<4){	<<<<< ERROR HERE
+	if (state->deckCount[currentPlayer] <1){//if the deck is empty we need to shuffle discard and add to deck
+	  shuffle(currentPlayer, state);
+	}
+	drawCard(currentPlayer, state);
+	totalDrawn++;	//increment amount of cards drawn
+
+	int cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];//top card of hand is most recently drawn card.
+	if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
+	  drawntreasure++;
+	else{
+	  temphand[z]=cardDrawn;
+	  state->handCount[currentPlayer]--; //this should just remove the top card (the most recently drawn one).
+	  z++;
+	}
+      }
+      while(z-1>=0){
+	state->discard[currentPlayer][state->discardCount[currentPlayer]++]=temphand[z-1]; // discard all cards in play that have been drawn
+	z=z-1;
+      }
+      return totalDrawn;
+}
+
+int smithyAction(int handPos, int currentPlayer, struct gameState *state)
+{
+	int i;
+
+//printf("hand count in saction before draw: %d\n", state->handCount[currentPlayer]);
+
+      //+3 Cards
+      for (i = 0; i < 2; i++)	<<< ERROR HERE
+		{
+		  drawCard(currentPlayer, state);
+		}
+//printf("hand count in saction: %d\n", state->handCount[currentPlayer]);
+		
+      //discard card from hand
+      discardCard(handPos, currentPlayer, state, 0);
+
+//printf("hand count in saction after discard: %d\n", state->handCount[currentPlayer]);
+
+      return 0;
+}
