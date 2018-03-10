@@ -16,11 +16,16 @@ public class UrlValidatorTest extends TestCase {
    public UrlValidatorTest(String testName) {
       super(testName);
    }
-
    
    
    public void testManualTest()
    {
+      UrlValidator urlValidator = new UrlValidator();
+
+      assertEquals(true, urlValidator.isValid("http://www.oregonstate.edu"));
+      assertEquals(false, urlValidator.isValid("rainbowsarepretty"));
+      assertEquals(true, urlValidator.isValid("oregonstate.edu"));
+
 //You can use this function to implement your manual testing	   
 	   
    }
