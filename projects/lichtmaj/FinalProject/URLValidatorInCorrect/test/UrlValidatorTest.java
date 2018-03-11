@@ -26,26 +26,18 @@ public class UrlValidatorTest extends TestCase {
    public void testManualTest()
    {
       UrlValidator urlValidator = new UrlValidator();
-
+      int validUrlCounter = 0;
       List<String> validUrls = Arrays.asList("http://www.oregonstate.edu", "www.oregonstate.edu");
       for(String url : validUrls) {
          if(urlValidator.isValid(url) == true){
             System.out.println(url + " Is valid");
+            validUrlCounter++;
          }
          else {
             System.out.println(url + " Is not valid");
          }
       }
-      
-
-      assertEquals(true, urlValidator.isValid("http://www.oregonstate.edu"));
-      assertEquals(true, urlValidator.isValid("http://www.oregonstate.com"));
-      assertEquals(true, urlValidator.isValid("www.oregonstate.edu"));
-      assertEquals(true, urlValidator.isValid("oregonstate.edu"));
-//      assertEquals(true, urlValidator.isValid("http://www.oregonstate.edu"));
-//      assertEquals(false, urlValidator.isValid("rainbowsarepretty"));
-//      assertEquals(true, urlValidator.isValid("oregonstate.edu"));
-      
+      assertEquals(validUrls.size(), validUrlCounter);
    }
    
    
