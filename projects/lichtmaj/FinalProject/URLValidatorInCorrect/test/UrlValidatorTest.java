@@ -22,8 +22,11 @@ public class UrlValidatorTest extends TestCase {
    public void testManualTest()
    {
       UrlValidator urlValidator = new UrlValidator();
-      assert urlValidator.isValid("http://www.oregonstate.edu") == true;
       assertEquals(true, urlValidator.isValid("http://www.oregonstate.edu"));
+      assertEquals(true, urlValidator.isValid("http://www.oregonstate.com"));
+      assertEquals(true, urlValidator.isValid("www.oregonstate.edu"));
+      assertEquals(true, urlValidator.isValid("oregonstate.edu"));
+//      assertEquals(true, urlValidator.isValid("http://www.oregonstate.edu"));
 //      assertEquals(false, urlValidator.isValid("rainbowsarepretty"));
 //      assertEquals(true, urlValidator.isValid("oregonstate.edu"));
 
