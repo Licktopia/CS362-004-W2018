@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05211a04-86cb-4c5f-afe7-3877c05fe83f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../URLValidatorCorrect/.idea/misc.xml" afterPath="$PROJECT_DIR$/../URLValidatorCorrect/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/../URLValidatorCorrect/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../URLValidatorCorrect/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/../URLValidatorCorrect/bin/UrlValidator.class" afterPath="$PROJECT_DIR$/../URLValidatorCorrect/bin/UrlValidator.class" />
+      <change beforePath="$PROJECT_DIR$/../URLValidatorCorrect/bin/UrlValidatorTest.class" afterPath="$PROJECT_DIR$/../URLValidatorCorrect/bin/UrlValidatorTest.class" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/URLValidatorInCorrect.iml" afterPath="$PROJECT_DIR$/URLValidatorInCorrect.iml" />
-      <change beforePath="$PROJECT_DIR$/bin/DomainValidator$1.class" afterPath="$PROJECT_DIR$/bin/DomainValidator$1.class" />
-      <change beforePath="$PROJECT_DIR$/bin/DomainValidator$ArrayType.class" afterPath="$PROJECT_DIR$/bin/DomainValidator$ArrayType.class" />
-      <change beforePath="$PROJECT_DIR$/bin/DomainValidator$IDNBUGHOLDER.class" afterPath="$PROJECT_DIR$/bin/DomainValidator$IDNBUGHOLDER.class" />
-      <change beforePath="$PROJECT_DIR$/bin/DomainValidator.class" afterPath="$PROJECT_DIR$/bin/DomainValidator.class" />
-      <change beforePath="$PROJECT_DIR$/bin/InetAddressValidator.class" afterPath="$PROJECT_DIR$/bin/InetAddressValidator.class" />
-      <change beforePath="$PROJECT_DIR$/bin/RegexValidator.class" afterPath="$PROJECT_DIR$/bin/RegexValidator.class" />
-      <change beforePath="$PROJECT_DIR$/bin/ResultPair.class" afterPath="$PROJECT_DIR$/bin/ResultPair.class" />
-      <change beforePath="$PROJECT_DIR$/bin/UrlValidator.class" afterPath="$PROJECT_DIR$/bin/UrlValidator.class" />
-      <change beforePath="$PROJECT_DIR$/bin/UrlValidatorTest.class" afterPath="$PROJECT_DIR$/bin/UrlValidatorTest.class" />
-      <change beforePath="$PROJECT_DIR$/test/UrlValidatorTest.java" afterPath="$PROJECT_DIR$/test/UrlValidatorTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,8 +47,8 @@
       <file leaf-file-name="UrlValidatorTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/UrlValidatorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="828">
-              <caret line="96" column="35" lean-forward="false" selection-start-line="96" selection-start-column="35" selection-end-line="96" selection-end-column="35" />
+            <state relative-caret-position="71">
+              <caret line="57" column="19" lean-forward="false" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -93,8 +82,8 @@
       <file leaf-file-name="UrlValidator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UrlValidator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="392" column="47" lean-forward="false" selection-start-line="392" selection-start-column="47" selection-end-line="392" selection-end-column="47" />
+            <state relative-caret-position="134">
+              <caret line="281" column="53" lean-forward="false" selection-start-line="281" selection-start-column="48" selection-end-line="281" selection-end-column="53" />
               <folding>
                 <element signature="e#8030#8031#0" expanded="true" />
                 <element signature="e#8056#8057#0" expanded="true" />
@@ -152,6 +141,8 @@
     <findStrings>
       <find>scheme.</find>
       <find>}</find>
+      <find>lower</find>
+      <find>upper</find>
     </findStrings>
     <replaceStrings>
       <replace>)</replace>
@@ -468,14 +459,11 @@
       <workItem from="1520791626900" duration="373000" />
       <workItem from="1520792237992" duration="1470000" />
       <workItem from="1520793766051" duration="20000" />
-      <workItem from="1520793807497" duration="7980000" />
+      <workItem from="1520793807497" duration="8310000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UrlValidatorTest_testIsValid - 2018.03.11 at 13h 40m 08s.xml">
-      <configuration name="UrlValidatorTest.testIsValid" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="UrlValidatorTest_testIsValid - 2018.03.11 at 13h 40m 32s.xml">
       <configuration name="UrlValidatorTest.testIsValid" configurationId="JUnit" />
     </history-entry>
@@ -503,9 +491,12 @@
     <history-entry file="UrlValidatorTest_testIsValid - 2018.03.11 at 14h 02m 10s.xml">
       <configuration name="UrlValidatorTest.testIsValid" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="UrlValidatorTest_testIsValid - 2018.03.11 at 14h 09m 12s.xml">
+      <configuration name="UrlValidatorTest.testIsValid" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19578000" />
+    <option name="totallyTimeSpent" value="19908000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="812" extended-state="0" />
@@ -956,17 +947,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/UrlValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="392" column="47" lean-forward="false" selection-start-line="392" selection-start-column="47" selection-end-line="392" selection-end-column="47" />
-          <folding>
-            <element signature="e#8030#8031#0" expanded="true" />
-            <element signature="e#8056#8057#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/RegexValidator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="127">
@@ -988,10 +968,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/UrlValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="281" column="53" lean-forward="false" selection-start-line="281" selection-start-column="48" selection-end-line="281" selection-end-column="53" />
+          <folding>
+            <element signature="e#8030#8031#0" expanded="true" />
+            <element signature="e#8056#8057#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/UrlValidatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="96" column="35" lean-forward="false" selection-start-line="96" selection-start-column="35" selection-end-line="96" selection-end-column="35" />
+        <state relative-caret-position="71">
+          <caret line="57" column="19" lean-forward="false" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
           <folding />
         </state>
       </provider>
