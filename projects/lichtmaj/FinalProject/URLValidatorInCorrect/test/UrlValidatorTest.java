@@ -28,7 +28,8 @@ public class UrlValidatorTest extends TestCase {
    {
       UrlValidator urlValidator = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
       int validUrlCounter = 0;
-      List<String> validUrls = Arrays.asList("http://www.oregonstate.edu", "http://www.google.com");
+      //List<String> validUrls = Arrays.asList("http://www.oregonstate.edu", "http://www.google.com");
+      List<String> validUrls = Arrays.asList("ftp://go.com:80");
       for(String url : validUrls) {
          if(urlValidator.isValid(url) == true){
             System.out.println(url + " Is valid");
@@ -57,6 +58,7 @@ public class UrlValidatorTest extends TestCase {
    
    public void testIsValid() {
       boolean noFailures = true;
+      int failedTests = 0;
       UrlValidator urlValidator = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
       for(String scheme : testSchemes) {
          for(String authority : testAuthorities) {
@@ -75,6 +77,7 @@ public class UrlValidatorTest extends TestCase {
                         Log.debug("Url validator failure with exception: " + e);
                      }
                      if (isValidUrl != validatorResult) {
+                        failedTests++;
                         noFailures = false;
                         if (isValidUrl) {
                            System.out.println(url + " is valid but tested as invalid");
@@ -90,6 +93,7 @@ public class UrlValidatorTest extends TestCase {
             }
          }
       }
+      System.out.println("Number of failed tests: " + failedTests);
       assertEquals(true, noFailures);
    }
 
