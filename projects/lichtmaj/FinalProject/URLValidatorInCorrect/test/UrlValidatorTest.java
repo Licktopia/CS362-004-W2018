@@ -2,6 +2,10 @@
 
 import junit.framework.TestCase;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 //You can use this as a skeleton for your 3 different test approach
 //It is an optional to use this file, you can generate your own test file(s) to test the target function!
 // Again, it is up to you to use this file or not!
@@ -22,13 +26,16 @@ public class UrlValidatorTest extends TestCase {
    public void testManualTest()
    {
       UrlValidator urlValidator = new UrlValidator();
-      assert urlValidator.isValid("http://www.oregonstate.edu") == true;
-      assertEquals(true, urlValidator.isValid("http://www.oregonstate.edu"));
-//      assertEquals(false, urlValidator.isValid("rainbowsarepretty"));
-//      assertEquals(true, urlValidator.isValid("oregonstate.edu"));
-
-//You can use this function to implement your manual testing	   
-	   
+      List<String> validUrls = Arrays.asList("http://www.oregonstate.edu", "www.oregonstate.edu");
+      for(String url : validUrls) {
+         if(urlValidator.isValid(url) == true){
+            System.out.println(url + " Is valid");
+         }
+         else {
+            System.out.println(url + " Is not valid");
+         }
+      }
+      
    }
    
    
