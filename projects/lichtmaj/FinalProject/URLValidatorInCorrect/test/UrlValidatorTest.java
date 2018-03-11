@@ -26,6 +26,7 @@ public class UrlValidatorTest extends TestCase {
    public void testManualTest()
    {
       UrlValidator urlValidator = new UrlValidator();
+
       List<String> validUrls = Arrays.asList("http://www.oregonstate.edu", "www.oregonstate.edu");
       for(String url : validUrls) {
          if(urlValidator.isValid(url) == true){
@@ -35,6 +36,15 @@ public class UrlValidatorTest extends TestCase {
             System.out.println(url + " Is not valid");
          }
       }
+      
+
+      assertEquals(true, urlValidator.isValid("http://www.oregonstate.edu"));
+      assertEquals(true, urlValidator.isValid("http://www.oregonstate.com"));
+      assertEquals(true, urlValidator.isValid("www.oregonstate.edu"));
+      assertEquals(true, urlValidator.isValid("oregonstate.edu"));
+//      assertEquals(true, urlValidator.isValid("http://www.oregonstate.edu"));
+//      assertEquals(false, urlValidator.isValid("rainbowsarepretty"));
+//      assertEquals(true, urlValidator.isValid("oregonstate.edu"));
       
    }
    
