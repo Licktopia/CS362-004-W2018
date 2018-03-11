@@ -21,10 +21,10 @@ public class UrlValidatorTest extends TestCase {
    public void testManualTest()
    {
       UrlValidator urlValidator = new UrlValidator();
-
+      assert urlValidator.isValid("http://www.oregonstate.edu") == true;
       assertEquals(true, urlValidator.isValid("http://www.oregonstate.edu"));
-      assertEquals(false, urlValidator.isValid("rainbowsarepretty"));
-      assertEquals(true, urlValidator.isValid("oregonstate.edu"));
+//      assertEquals(false, urlValidator.isValid("rainbowsarepretty"));
+//      assertEquals(true, urlValidator.isValid("oregonstate.edu"));
 
 //You can use this function to implement your manual testing	   
 	   
@@ -33,8 +33,9 @@ public class UrlValidatorTest extends TestCase {
    
    public void testYourFirstPartition()
    {
+      UrlValidator urlValidator = new UrlValidator();
 	 //You can use this function to implement your First Partition testing	   
-
+      assertEquals(false, urlValidator.isValid("rainbowsarepretty"));
    }
    
    public void testYourSecondPartition(){
