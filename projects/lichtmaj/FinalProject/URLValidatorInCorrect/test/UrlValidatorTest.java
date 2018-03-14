@@ -26,8 +26,18 @@ public class UrlValidatorTest extends TestCase {
    
    public void testManualTest()
    {
-
-   }
+	   //UrlValidator urlValidator = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES)
+	   UrlValidator urlValidator = new UrlValidator(UrlValidator.ALLOW_ALL_SCHEMES);
+	   
+	   assertTrue(urlValidator.isValid("http://www.oregonstate.edu"));
+	   assertTrue(urlValidator.isValid("http://www.oregonstate.com"));
+	   assertTrue(urlValidator.isValid("www.oregonstate.edu"));
+	   assertTrue(urlValidator.isValid("http://oregonstate.edu"));
+	   assertTrue(urlValidator.isValid("oregonstate.edu"));
+	   assertTrue(urlValidator.isValid("http://www"));
+	   assertTrue(urlValidator.isValid("http://www.google.com"));
+	   
+   }   
    
   //partitioned based on valid url schemes and invalid url schemes
    public void testYourFirstPartition()
