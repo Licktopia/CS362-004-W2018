@@ -39,8 +39,8 @@ public class UrlValidatorTest extends TestCase {
 	   
    }   
    
-  //partitioned based on valid url schemes and invalid url schemes
-   public void testYourFirstPartition()
+  //partition based on valid url schemes-----------------------------------------------------------------------------------------------
+   public void validSchemesPartition()
    {
       UrlValidator urlValidator = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
       int validUrlCounter = 0;
@@ -56,7 +56,12 @@ public class UrlValidatorTest extends TestCase {
          }
       }
       assertEquals(validUrls.size(), validUrlCounter);
-      
+   }
+   
+  //invalid scheme partition testing--------------------------------------------------------------------------------------------- 
+   public void invalidSchemesPartition()
+   {
+      UrlValidator urlValidator = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
       int inValidUrlCounter = 0;
       List<String> inValidUrls = Arrays.asList("Ftp://go.com:80", "http:/go.com:80", "3ttps://go.com:80", "_323://go.com:80");
       for(String url : inValidUrls) {
@@ -71,11 +76,11 @@ public class UrlValidatorTest extends TestCase {
       assertEquals(inValidUrls.size(), inValidUrlCounter);
    }
   //---------------------------------------------------------------------------------------------------------------
-  //partitioning based on valid and invalid url authorities
-   public void testYourSecondPartition(){
+  //partitioning based on valid url authorities
+   public void validAuthorityPartition(){
       UrlValidator urlValidator = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
       int validUrlCounter = 0;
-      List<String> validAuthority = Arrays.asList("ftp://go.com:80", "http://www.google.com", "https://go.com:80", "http://255.168.192.45", "go.com:80");
+      List<String> validAuthority = Arrays.asList("ftp://go.com:80", "https://www.google.com", "https://go.com:80", "http://255.168.192.45", "go.com:80");
       for(String url : validAuthority) {
          if(urlValidator.isValid(url) == true){
             System.out.println(url + " Valid Url, authority is good");
@@ -86,9 +91,14 @@ public class UrlValidatorTest extends TestCase {
          }
       }
       assertEquals(validAuthority.size(), validUrlCounter);
-      
-      validUrlCounter = 0;
-      List<String> inValidAuthority = Arrays.asList("Ftp://", "http://134", "https://go.a", "http://256.255.168.12");
+   }
+   
+  //invalid authority partition testing--------------------------------------------------------------------------------------------- 
+   public void invalidAuthorityPartition()
+   {
+      UrlValidator urlValidator = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
+      int validUrlCounter = 0;
+      List<String> inValidAuthority = Arrays.asList("ftp://", "http://134", "https://go.a", "http://256.255.168.12");
       for(String url : inValidAuthority) {
          if(urlValidator.isValid(url) == true){
             System.out.println(url + " Invalid URL, expected authority to be no good");
@@ -101,8 +111,8 @@ public class UrlValidatorTest extends TestCase {
       assertEquals(inValidAuthority.size(), validUrlCounter);
    }
   //---------------------------------------------------------------------------------------------------------------------- 
-  //partitioned based on valid url path and invalid url path
-   public void testYourThirdPartition()
+  //partitioned based on valid url path
+   public void validPathPartition()
    {
       UrlValidator urlValidator = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
       int validUrlCounter = 0;
@@ -117,7 +127,11 @@ public class UrlValidatorTest extends TestCase {
          }
       }
       assertEquals(validPath.size(), validUrlCounter);
-      
+   }
+  //invalid path partition testing--------------------------------------------------------------------------------------------- 
+   public void invalidPathPartition()
+   {
+      UrlValidator urlValidator = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
       int inValidUrlCounter = 0;
       List<String> inValidPath = Arrays.asList("ftp://go.com:80/#24", "http://go.com:80/..", "https://go.com:80/234");
       for(String url : inValidPath) {
@@ -132,6 +146,24 @@ public class UrlValidatorTest extends TestCase {
       assertEquals(inValidPath.size(), inValidUrlCounter);
    }
    //-------------------------------------------------------------------------------------------------------------------------
+   //Partition test for https vs. http addresses
+   public void httpVSnonePartition()
+   {
+      UrlValidator urlValidator = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
+      int validUrlCounter = 0;
+      List<String> validPath = Arrays.asList("www.google.com", "http://www.google.com", "www.oregonstate.edu", "http://www.oregonstate.edu"); 
+      for(String url : validPath) {
+         if(urlValidator.isValid(url) == true){
+            System.out.println(url + " Valid Url");
+            validUrlCounter++;
+         }
+         else {
+            System.out.println(url + " Invalid URL");
+         }
+      }
+      assertEquals(validPath.size(), validUrlCounter);
+   }
+   //--------------------------------------------------------------------------------------------------------------------------
    
    public void testIsValid() {
       boolean noFailures = true;
