@@ -1,6 +1,6 @@
 
 
-import com.oracle.tools.packager.Log;
+//import com.oracle.tools.packager.Log;
 import junit.framework.TestCase;
 
 import java.util.ArrayList;
@@ -29,42 +29,99 @@ public class UrlValidatorTest extends TestCase {
 
    }
    
-   
+  //partitioned based on valid url schemes and invalid url schemes
    public void testYourFirstPartition()
    {
       UrlValidator urlValidator = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
       int validUrlCounter = 0;
       //List<String> validUrls = Arrays.asList("http://www.oregonstate.edu", "http://www.google.com");
-      List<String> validUrls = Arrays.asList("ftp://go.com:80");
+      List<String> validUrls = Arrays.asList("ftp://go.com:80", "http://go.com:80", "https://go.com:80", "h323://go.com:80", "go.com:80");
       for(String url : validUrls) {
          if(urlValidator.isValid(url) == true){
-            System.out.println(url + " Valid Url tests as valid");
+            System.out.println(url + " Valid URL, scheme is good");
             validUrlCounter++;
          }
          else {
-            System.out.println(url + " Valid Url tests as not invalid");
+            System.out.println(url + " invalid URL, scheme is no good");
          }
       }
       assertEquals(validUrls.size(), validUrlCounter);
-   }
-   
-   public void testYourSecondPartition(){
-      UrlValidator urlValidator = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
-      int invalidUrlCounter = 0;
-      //List<String> validUrls = Arrays.asList("http://www.oregonstate.edu", "http://www.google.com");
-      List<String> invalidUrls = Arrays.asList("garbageurl");
-      for(String url : invalidUrls) {
-         if(urlValidator.isValid(url) == false){
-            System.out.println(url + " Invalid Url tests as invalid");
-            invalidUrlCounter++;
+      
+      int inValidUrlCounter = 0;
+      List<String> inValidUrls = Arrays.asList("Ftp://go.com:80", "http:/go.com:80", "3ttps://go.com:80", "_323://go.com:80");
+      for(String url : inValidUrls) {
+         if(urlValidator.isValid(url) == true){
+            System.out.println(url + " Valid URL, expected scheme to be bad");
+            inValidUrlCounter++;
          }
          else {
-            System.out.println(url + " Invalid Url tests as valid");
+            System.out.println(url + " Valid URL, scheme bad as expected");
          }
       }
-      assertEquals(invalidUrls.size(), invalidUrlCounter);
+      assertEquals(inValidUrls.size(), inValidUrlCounter);
    }
-   //You need to create more test cases for your Partitions if you need to 
+  //---------------------------------------------------------------------------------------------------------------
+  //partitioning based on valid and invalid url authorities
+   public void testYourSecondPartition(){
+      UrlValidator urlValidator = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
+      int validUrlCounter = 0;
+      List<String> validAuthority = Arrays.asList("ftp://go.com:80", "http://www.google.com", "https://go.com:80", "http://255.168.192.45", "go.com:80");
+      for(String url : validAuthority) {
+         if(urlValidator.isValid(url) == true){
+            System.out.println(url + " Valid Url, authority is good");
+            validUrlCounter++;
+         }
+         else {
+            System.out.println(url + " invalid URL, authority is no good");
+         }
+      }
+      assertEquals(validAuthority.size(), validUrlCounter);
+      
+      validUrlCounter = 0;
+      List<String> inValidAuthority = Arrays.asList("Ftp://", "http://134", "https://go.a", "http://256.255.168.12");
+      for(String url : inValidAuthority) {
+         if(urlValidator.isValid(url) == true){
+            System.out.println(url + " Invalid URL, expected authority to be no good");
+            validUrlCounter++;
+         }
+         else {
+            System.out.println(url + " Invalid Url, authority bad as expected");
+         }
+      }
+      assertEquals(inValidAuthority.size(), validUrlCounter);
+   }
+  //---------------------------------------------------------------------------------------------------------------------- 
+  //partitioned based on valid url path and invalid url path
+   public void testYourThirdPartition()
+   {
+      UrlValidator urlValidator = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
+      int validUrlCounter = 0;
+      List<String> validPath = Arrays.asList("ftp://go.com:80/$87", "http://go.com:80/realone", "https://go.com:80/good", "h323://go.com:80/"); 
+      for(String url : validPath) {
+         if(urlValidator.isValid(url) == true){
+            System.out.println(url + " Valid Url, path is good");
+            validUrlCounter++;
+         }
+         else {
+            System.out.println(url + " Invalid URL, path is no good");
+         }
+      }
+      assertEquals(validPath.size(), validUrlCounter);
+      
+      int inValidUrlCounter = 0;
+      List<String> inValidPath = Arrays.asList("ftp://go.com:80/#24", "http://go.com:80/..", "https://go.com:80/234");
+      for(String url : inValidPath) {
+         if(urlValidator.isValid(url) == true){
+            System.out.println(url + " valid URL, expected path to be invalid");
+            inValidUrlCounter++;
+         }
+         else {
+            System.out.println(url + " Invalid Url, path invalid as expected");
+         }
+      }
+      assertEquals(inValidPath.size(), inValidUrlCounter);
+   }
+   //-------------------------------------------------------------------------------------------------------------------------
    
    public void testIsValid() {
       boolean noFailures = true;
@@ -84,7 +141,7 @@ public class UrlValidatorTest extends TestCase {
                         validatorResult = urlValidator.isValid(url);
                      }
                      catch (Error e) {
-                        Log.debug("Url validator failure with exception: " + e);
+//                        Log.debug("Url validator failure with exception: " + e);
                      }
                      if (isValidUrl != validatorResult) {
                         failedTests++;
