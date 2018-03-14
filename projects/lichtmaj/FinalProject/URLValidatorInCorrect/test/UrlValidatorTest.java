@@ -26,33 +26,43 @@ public class UrlValidatorTest extends TestCase {
    
    public void testManualTest()
    {
+
+   }
+   
+   
+   public void testYourFirstPartition()
+   {
       UrlValidator urlValidator = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
       int validUrlCounter = 0;
       //List<String> validUrls = Arrays.asList("http://www.oregonstate.edu", "http://www.google.com");
       List<String> validUrls = Arrays.asList("ftp://go.com:80");
       for(String url : validUrls) {
          if(urlValidator.isValid(url) == true){
-            System.out.println(url + " Is valid");
+            System.out.println(url + " Valid Url tests as valid");
             validUrlCounter++;
          }
          else {
-            System.out.println(url + " Is not valid");
+            System.out.println(url + " Valid Url tests as not invalid");
          }
       }
       assertEquals(validUrls.size(), validUrlCounter);
    }
    
-   
-   public void testYourFirstPartition()
-   {
-      UrlValidator urlValidator = new UrlValidator();
-	 //You can use this function to implement your First Partition testing	   
-      assertEquals(false, urlValidator.isValid("rainbowsarepretty"));
-   }
-   
    public void testYourSecondPartition(){
-		 //You can use this function to implement your Second Partition testing	   
-
+      UrlValidator urlValidator = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
+      int invalidUrlCounter = 0;
+      //List<String> validUrls = Arrays.asList("http://www.oregonstate.edu", "http://www.google.com");
+      List<String> invalidUrls = Arrays.asList("garbageurl");
+      for(String url : invalidUrls) {
+         if(urlValidator.isValid(url) == false){
+            System.out.println(url + " Invalid Url tests as invalid");
+            invalidUrlCounter++;
+         }
+         else {
+            System.out.println(url + " Invalid Url tests as valid");
+         }
+      }
+      assertEquals(invalidUrls.size(), invalidUrlCounter);
    }
    //You need to create more test cases for your Partitions if you need to 
    
@@ -98,6 +108,7 @@ public class UrlValidatorTest extends TestCase {
    }
 
    String findInvalidPart(String scheme, String authority, String port, String path, String query) {
+      ArrayList<String> myArray = new ArrayList<String>();
       String text = " Invalid Parts: (";
       if(!validSchemes.contains(scheme)) {
          text = text + "scheme: " + scheme + ", ";
@@ -128,6 +139,4 @@ public class UrlValidatorTest extends TestCase {
    private List<String> testPaths = Arrays.asList("/image", "", "/image/image", "/1test", "/#", "/&#", "/#&*");
    private List<String> validQueries = Arrays.asList("?test=true", "", "?test=true&test1=false", "?cool=5");
    private List<String> testQueries = Arrays.asList("?test=true", "", "?test=true&test1=false", "?cool=5", "#", "?test#5", "###");
-
-
 }
