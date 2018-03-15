@@ -34,7 +34,7 @@ public class UrlValidatorTest extends TestCase {
 	   assertTrue(urlValidator.isValid("www.oregonstate.edu"));
 	   assertTrue(urlValidator.isValid("http://oregonstate.edu"));
 	   assertTrue(urlValidator.isValid("oregonstate.edu"));
-	   assertTrue(urlValidator.isValid("http://www"));
+	   assertFalse(urlValidator.isValid("http://www"));
 	   assertTrue(urlValidator.isValid("http://www.google.com"));
 	   
    }   
