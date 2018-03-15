@@ -146,12 +146,30 @@ public class UrlValidatorTest extends TestCase {
       assertEquals(inValidPath.size(), inValidUrlCounter);
    }
    //-------------------------------------------------------------------------------------------------------------------------
-   //Partition test for https vs. http addresses
-   public void testHttpVSnonePartition()
+   //Partition test for non schemed addresses
+   public void testNoHttpPartition()
    {
       UrlValidator urlValidator = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
       int validUrlCounter = 0;
-      List<String> validPath = Arrays.asList("www.google.com", "http://www.google.com", "www.oregonstate.edu", "http://www.oregonstate.edu"); 
+      List<String> validPath = Arrays.asList("www.google.com", "www.amazon.com", "www.newegg.com", "www.oregonstate.edu"); 
+      for(String url : validPath) {
+         if(urlValidator.isValid(url) == true){
+            System.out.println(url + " Valid Url");
+            validUrlCounter++;
+         }
+         else {
+            System.out.println(url + " Invalid URL");
+         }
+      }
+      assertEquals(validPath.size(), validUrlCounter);
+   }
+   //--------------------------------------------------------------------------------------------------------------------------
+   //Partition test for http addresses
+   public void testHttpPartition()
+   {
+      UrlValidator urlValidator = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
+      int validUrlCounter = 0;
+      List<String> validPath = Arrays.asList("http://www.amazon.com", "http://www.google.com", "https://www.newegg.com", "ftp://www.oregonstate.edu"); 
       for(String url : validPath) {
          if(urlValidator.isValid(url) == true){
             System.out.println(url + " Valid Url");
