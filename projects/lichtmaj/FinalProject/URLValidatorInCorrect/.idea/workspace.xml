@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05211a04-86cb-4c5f-afe7-3877c05fe83f" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/../../../../.idea/CS362-004-W2018.iml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../../../../.idea/modules.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../../../../.idea/vcs.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../../../../.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/bin/UrlValidator.class" afterPath="$PROJECT_DIR$/bin/UrlValidator.class" />
       <change beforePath="$PROJECT_DIR$/bin/UrlValidatorTest.class" afterPath="$PROJECT_DIR$/bin/UrlValidatorTest.class" />
       <change beforePath="$PROJECT_DIR$/test/UrlValidatorTest.java" afterPath="$PROJECT_DIR$/test/UrlValidatorTest.java" />
     </list>
@@ -47,8 +50,8 @@
       <file leaf-file-name="UrlValidatorTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/UrlValidatorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1633">
-              <caret line="31" column="34" lean-forward="false" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+            <state relative-caret-position="-3004">
+              <caret line="36" column="18" lean-forward="false" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#513#514#0" expanded="true" />
@@ -58,20 +61,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StringBuilder.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/lang/StringBuilder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5505">
-              <caret line="404" column="18" lean-forward="false" selection-start-line="404" selection-start-column="18" selection-end-line="404" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="RegexValidator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/RegexValidator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1455">
+            <state relative-caret-position="1515">
               <caret line="120" column="0" lean-forward="false" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
               <folding>
                 <element signature="e#2784#2785#0" expanded="true" />
@@ -86,32 +79,12 @@
       <file leaf-file-name="UrlValidator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UrlValidator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-76">
-              <caret line="191" column="48" lean-forward="false" selection-start-line="191" selection-start-column="33" selection-end-line="191" selection-end-column="48" />
+            <state relative-caret-position="5385">
+              <caret line="392" column="63" lean-forward="false" selection-start-line="392" selection-start-column="63" selection-end-line="392" selection-end-column="63" />
               <folding>
                 <element signature="e#8030#8031#0" expanded="true" />
                 <element signature="e#8056#8057#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Pattern.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/regex/Pattern.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15630">
-              <caret line="1085" column="19" lean-forward="false" selection-start-line="1085" selection-start-column="19" selection-end-line="1085" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InvocationTargetException.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/lang/reflect/InvocationTargetException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -122,6 +95,19 @@
             <state relative-caret-position="780">
               <caret line="70" column="33" lean-forward="false" selection-start-line="70" selection-start-column="33" selection-end-line="70" selection-end-column="33" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -144,8 +130,6 @@
       <find>}</find>
       <find>lower</find>
       <find>upper</find>
-      <find>allowedSchemes.add(schemes[i]</find>
-      <find>shcemes[]</find>
     </findStrings>
     <replaceStrings>
       <replace>)</replace>
@@ -168,9 +152,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.classpath" />
+        <option value="$PROJECT_DIR$/src/UrlValidator.java" />
         <option value="$PROJECT_DIR$/src/DomainValidator.java" />
         <option value="$PROJECT_DIR$/test/UrlValidatorTest.java" />
-        <option value="$PROJECT_DIR$/src/UrlValidator.java" />
       </list>
     </option>
   </component>
@@ -201,10 +185,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -261,27 +241,14 @@
               <item name="lang" type="462c0819:PsiDirectoryNode" />
               <item name="reflect" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="URLValidatorInCorrect" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="URLValidatorInCorrect" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-              <item name="regex" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -455,8 +422,8 @@
     <recent_temporary>
       <list size="3">
         <item index="0" class="java.lang.String" itemvalue="JUnit.UrlValidatorTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.UrlValidatorTest.testManualTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.UrlValidatorTest.testIsValid" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.UrlValidatorTest.testIsValid" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.UrlValidatorTest.testManualTest" />
       </list>
     </recent_temporary>
   </component>
@@ -484,17 +451,36 @@
       <workItem from="1520902620272" duration="1901000" />
       <workItem from="1520991165385" duration="1003000" />
       <workItem from="1521058876184" duration="833000" />
-      <workItem from="1521068503392" duration="4654000" />
-      <workItem from="1521308688050" duration="26000" />
+      <workItem from="1521068503392" duration="196000" />
+      <workItem from="1521154247592" duration="67000" />
+      <workItem from="1521308791644" duration="11000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UrlValidatorTest - 2018.03.14 at 18h 32m 45s.xml">
+    <history-entry file="UrlValidatorTest - 2018.03.14 at 13h 24m 01s.xml">
       <configuration name="UrlValidatorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UrlValidatorTest - 2018.03.17 at 10h 45m 05s.xml">
-      <configuration name="UrlValidatorTest" configurationId="JUnit" />
+    <history-entry file="UrlValidatorTest_testManualTest - 2018.03.11 at 14h 15m 29s.xml">
+      <configuration name="UrlValidatorTest.testManualTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UrlValidatorTest_testManualTest - 2018.03.11 at 14h 16m 36s.xml">
+      <configuration name="UrlValidatorTest.testManualTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UrlValidatorTest_testManualTest - 2018.03.11 at 14h 16m 38s.xml">
+      <configuration name="UrlValidatorTest.testManualTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UrlValidatorTest_testManualTest - 2018.03.11 at 14h 17m 40s.xml">
+      <configuration name="UrlValidatorTest.testManualTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UrlValidatorTest_testManualTest - 2018.03.11 at 14h 18m 23s.xml">
+      <configuration name="UrlValidatorTest.testManualTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UrlValidatorTest_testManualTest - 2018.03.11 at 14h 19m 42s.xml">
+      <configuration name="UrlValidatorTest.testManualTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UrlValidatorTest_testManualTest - 2018.03.11 at 14h 20m 15s.xml">
+      <configuration name="UrlValidatorTest.testManualTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="UrlValidatorTest_testManualTest - 2018.03.11 at 14h 23m 25s.xml">
       <configuration name="UrlValidatorTest.testManualTest" configurationId="JUnit" />
@@ -502,27 +488,9 @@
     <history-entry file="UrlValidatorTest_testManualTest - 2018.03.11 at 14h 29m 16s.xml">
       <configuration name="UrlValidatorTest.testManualTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UrlValidatorTest_testManualTest - 2018.03.14 at 18h 40m 19s.xml">
-      <configuration name="UrlValidatorTest.testManualTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UrlValidatorTest_testManualTest - 2018.03.14 at 18h 41m 35s.xml">
-      <configuration name="UrlValidatorTest.testManualTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UrlValidatorTest_testManualTest - 2018.03.14 at 18h 42m 01s.xml">
-      <configuration name="UrlValidatorTest.testManualTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UrlValidatorTest_testManualTest - 2018.03.14 at 19h 22m 51s.xml">
-      <configuration name="UrlValidatorTest.testManualTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UrlValidatorTest_testManualTest - 2018.03.14 at 19h 22m 53s.xml">
-      <configuration name="UrlValidatorTest.testManualTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UrlValidatorTest_testManualTest - 2018.03.14 at 19h 23m 00s.xml">
-      <configuration name="UrlValidatorTest.testManualTest" configurationId="JUnit" />
-    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30384000" />
+    <option name="totallyTimeSpent" value="25978000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="812" extended-state="0" />
@@ -530,32 +498,32 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914925" sideWeight="0.48855507" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22873083" sideWeight="0.21459228" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32914925" sideWeight="0.20171674" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22873083" sideWeight="0.7854077" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914925" sideWeight="0.7982833" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28898427" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2932761" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2532189" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34449095" sideWeight="0.8590844" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39888424" sideWeight="0.8640916" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914925" sideWeight="0.49713877" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914925" sideWeight="0.48855507" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32914925" sideWeight="0.4914163" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914925" sideWeight="0.49427754" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -570,44 +538,23 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/UrlValidator.java</url>
+          <line>331</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/UrlValidator.java</url>
           <line>392</line>
           <properties />
           <option name="timeStamp" value="17" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/UrlValidator.java</url>
-          <line>356</line>
-          <properties />
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/UrlValidator.java</url>
-          <line>311</line>
-          <properties />
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="22" />
+      <option name="time" value="18" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
-      <expression>
-        <expression-string>isValidScheme(&quot;ftp&quot;)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>isValidScheme(&quot;http&quot;)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>isValidScheme(&quot;http://&quot;)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
       <expression>
         <expression-string>DomainValidator.unicodeToASCII(&quot;www.oregonstate.edu&quot;)</expression-string>
         <language-id>JAVA</language-id>
@@ -706,6 +653,7 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -724,6 +672,7 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -773,27 +722,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/Set.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="118" column="12" lean-forward="false" selection-start-line="118" selection-start-column="12" selection-end-line="118" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/regex/Matcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8535">
-          <caret line="602" column="19" lean-forward="false" selection-start-line="602" selection-start-column="19" selection-end-line="602" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/regex/Pattern.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15630">
-          <caret line="1085" column="19" lean-forward="false" selection-start-line="1085" selection-start-column="19" selection-end-line="1085" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/Set.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/regex/Matcher.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/regex/Pattern.java" />
     <entry file="file://$PROJECT_DIR$/.classpath">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -838,27 +769,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/Set.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="118" column="12" lean-forward="false" selection-start-line="118" selection-start-column="12" selection-end-line="118" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/regex/Pattern.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16275">
-          <caret line="1085" column="19" lean-forward="false" selection-start-line="1085" selection-start-column="19" selection-end-line="1085" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/regex/Matcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8535">
-          <caret line="602" column="19" lean-forward="false" selection-start-line="602" selection-start-column="19" selection-end-line="602" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/Set.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/regex/Pattern.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/regex/Matcher.java" />
     <entry file="file://$PROJECT_DIR$/.classpath">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -896,27 +809,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/Set.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="118" column="12" lean-forward="false" selection-start-line="118" selection-start-column="12" selection-end-line="118" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/regex/Matcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8535">
-          <caret line="602" column="19" lean-forward="false" selection-start-line="602" selection-start-column="19" selection-end-line="602" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/regex/Pattern.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15630">
-          <caret line="1085" column="19" lean-forward="false" selection-start-line="1085" selection-start-column="19" selection-end-line="1085" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/Set.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/regex/Matcher.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/regex/Pattern.java" />
     <entry file="file://$PROJECT_DIR$/src/UrlValidator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4950">
@@ -938,25 +833,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/Set.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="118" column="12" lean-forward="false" selection-start-line="118" selection-start-column="12" selection-end-line="118" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/regex/Matcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8535">
-          <caret line="602" column="19" lean-forward="false" selection-start-line="602" selection-start-column="19" selection-end-line="602" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/regex/Pattern.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/Set.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/regex/Matcher.java" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -986,31 +871,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/lang/StringBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5505">
-          <caret line="404" column="18" lean-forward="false" selection-start-line="404" selection-start-column="18" selection-end-line="404" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/lang/reflect/InvocationTargetException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/lang/StringBuilder.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/lang/reflect/InvocationTargetException.java" />
     <entry file="file://$PROJECT_DIR$/src/RegexValidator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1455">
+        <state relative-caret-position="1515">
           <caret line="120" column="0" lean-forward="false" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
           <folding>
             <element signature="e#2784#2785#0" expanded="true" />
             <element signature="e#2817#2818#0" expanded="true" />
             <element signature="e#3238#3239#0" expanded="true" />
             <element signature="e#3295#3296#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UrlValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5385">
+          <caret line="392" column="63" lean-forward="false" selection-start-line="392" selection-start-column="63" selection-end-line="392" selection-end-column="63" />
+          <folding>
+            <element signature="e#8030#8031#0" expanded="true" />
+            <element signature="e#8056#8057#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1023,29 +905,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/regex/Pattern.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15630">
-          <caret line="1085" column="19" lean-forward="false" selection-start-line="1085" selection-start-column="19" selection-end-line="1085" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UrlValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-76">
-          <caret line="191" column="48" lean-forward="false" selection-start-line="191" selection-start-column="33" selection-end-line="191" selection-end-column="48" />
-          <folding>
-            <element signature="e#8030#8031#0" expanded="true" />
-            <element signature="e#8056#8057#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/UrlValidatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1633">
-          <caret line="31" column="34" lean-forward="false" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+        <state relative-caret-position="-3004">
+          <caret line="36" column="18" lean-forward="false" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#513#514#0" expanded="true" />
